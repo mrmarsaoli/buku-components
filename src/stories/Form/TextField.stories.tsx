@@ -19,7 +19,7 @@ Default.args = {
 export const WithLabel = Template.bind({})
 WithLabel.args = {
   label: 'Input',
-  placeholder: 'Normal input'
+  placeholder: 'Input with label'
 }
 
 export const Large = Template.bind({})
