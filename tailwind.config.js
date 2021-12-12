@@ -12,6 +12,12 @@ module.exports = {
   content: ['./src/**/*.{js,ts,tsx}'],
   theme: {
     extend: {
+      spacing: {
+        0.5: '0.125rem',
+        1.5: '0.375rem',
+        2.5: '0.625rem',
+        3.5: '0.875rem'
+      },
       colors: {
         primary: PRIMARY,
         secondary: SECONDARY,
