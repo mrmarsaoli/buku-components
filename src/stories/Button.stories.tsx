@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Button } from '../components/Button'
 import { BLUE_10, BLUE_80 } from '../constants/colors'
+import { Button } from '../components'
 
 export default {
   title: 'Action/Button',
