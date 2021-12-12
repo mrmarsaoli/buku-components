@@ -4,7 +4,7 @@ import { Button } from '../components/Button'
 import { BLUE_10, BLUE_80 } from '../constants/colors'
 
 export default {
-  title: 'Example/Button',
+  title: 'Action/Button',
   component: Button,
   argTypes: {
     color: { control: 'color' },
