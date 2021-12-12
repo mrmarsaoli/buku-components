@@ -85,7 +85,7 @@ export const Textarea = ({
         {!!label && (
           <div className="mb-2 flex items-center font-medium">
             <label
-              className={`text-sm font-medium text-gray-900 block mb-2 ${
+              className={`text-sm font-medium text-gray-900 block ${
                 isError ? 'text-warning' : 'text-gray-900'
               }`}
               htmlFor={id}

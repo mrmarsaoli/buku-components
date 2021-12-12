@@ -55,6 +55,7 @@ export const Checkbox = ({
   return (
     <div className="inline-flex">
       <input
+        id={id}
         aria-describedby={id}
         type="checkbox"
         className={`bg-white border-gray-300 h-4 w-4 rounded ${typeMap[type]} ${
