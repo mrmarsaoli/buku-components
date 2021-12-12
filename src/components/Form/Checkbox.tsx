@@ -20,57 +20,71 @@ interface CheckboxProps {
   /**
    * Optional checkbox label
    */
-  label?: string
+  label?: string | JSX.Element
   /**
    * Disable checkbox
    */
   disabled?: string
   /**
+   * Id for input
+   */
+  id?: string
+  /**
    * Optional checkbox select event
    */
-  input?: (value: boolean) => void
+  onSelect?: (value: boolean) => void
 }
 
 export const Checkbox = ({
-  width = 20,
-  height = 20,
-  type = 'neutral',
+  width,
+  height,
+  type = 'normal',
   value = false,
   label,
   disabled,
-  input
+  id,
+  onSelect
 }: CheckboxProps) => {
-  const select = (value: boolean) => {
-    if (!input || !!disabled) {
+  const handleClick = (value: boolean) => {
+    if (!onSelect || !!disabled) {
       return
     }
 
-    input(value)
+    onSelect(value)
   }
   return (
     <div className="inline-flex">
-      <div
-        className={`flex items-center justify-center border-black-80 rounded-md border ${
-          value ? 'border-' + typeMap[type] : ''
+      <input
+        aria-describedby={id}
+        type="checkbox"
+        className={`bg-white border-gray-300 h-4 w-4 rounded ${typeMap[type]} ${
+          !!label ? 'mt-0.5' : ''
         }`}
-        role="button"
-        style={{ width, height }}
-        onClick={() => select(!value)}
-      >
-        {value && (
-          <div className={`w-8/12 rounded-md h-4/6 bg-${typeMap[type]}`}></div>
-        )}
-      </div>
-      {!!label && (
-        <span className={`ml-3 text-sm text-${typeMap[type]}`}>{label}</span>
-      )}
+        checked={!!value}
+        style={{
+          width,
+          height
+        }}
+        onClick={() => handleClick(!value)}
+      />
+      {!!label &&
+        (typeof label === 'string' ? (
+          <label
+            htmlFor={id}
+            className={`text-sm ml-3 font-medium ${typeMap[type]}`}
+          >
+            {label}
+          </label>
+        ) : (
+          label
+        ))}
     </div>
   )
 }
 
 const typeMap = {
-  primary: 'primary',
-  secondary: 'secondary',
-  neutral: 'neutral',
-  warning: 'warning'
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  normal: 'text-gray-900',
+  warning: 'text-warning'
 }
