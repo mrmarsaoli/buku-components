@@ -77,7 +77,7 @@ export const Button = ({
     <>
       <button
         type="button"
-        className={`inline-flex items-center relative text-center overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
+        className={`inline-flex items-center justify-center relative text-center overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
         style={{ width, color, backgroundColor }}
         onClick={() => clickHandle()}
         role="button"
