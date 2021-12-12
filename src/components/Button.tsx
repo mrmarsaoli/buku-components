@@ -38,7 +38,7 @@ interface ButtonProps {
    */
   loading?: boolean
   /**
-   * Optional callback
+   * Optional click event
    */
   onClick?: () => void
 }
