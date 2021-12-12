@@ -113,7 +113,7 @@ export const TextField = ({
               className={`text-sm font-medium text-gray-900 block mb-2 ${
                 isError ? 'text-warning' : 'text-gray-900'
               }`}
-              {...{ htmlFor: id }}
+              htmlFor={id}
             >
               {label}
             </label>
@@ -136,7 +136,7 @@ export const TextField = ({
           }}
         >
           {iconPosition === 'left' ? (
-            <span className="mr-2.5">{icon}</span>
+            <span className={!!icon ? 'mr-2.5' : ''}>{icon}</span>
           ) : (
             children
           )}
