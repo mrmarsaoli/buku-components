@@ -10,7 +10,6 @@ const {
 
 module.exports = {
   content: ['./src/**/*.{js,ts,tsx}'],
-  purge: ['./src/**/*.{js,ts,tsx}'],
   theme: {
     extend: {
       colors: {
