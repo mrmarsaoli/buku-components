@@ -15,9 +15,7 @@ module.exports = {
       colors: {
         primary: PRIMARY,
         secondary: SECONDARY,
-        neutral: {
-          DEFAULT: NEUTRAL
-        },
+        neutral: NEUTRAL,
         warning: WARNING,
         blue: {
           80: BLUE_80,
