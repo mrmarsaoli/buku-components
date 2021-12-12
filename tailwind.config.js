@@ -5,7 +5,7 @@ const {
   BLUE_80,
   BLUE_60,
   BLUE_10,
-  GRAY
+  NEUTRAL
 } = require('./src/constants/colors.js')
 
 module.exports = {
@@ -15,8 +15,8 @@ module.exports = {
       colors: {
         primary: PRIMARY,
         secondary: SECONDARY,
-        gray: {
-          DEFAULT: GRAY
+        neutral: {
+          DEFAULT: NEUTRAL
         },
         warning: WARNING,
         blue: {

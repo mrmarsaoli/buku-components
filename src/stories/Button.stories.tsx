@@ -25,10 +25,10 @@ Primary.args = {
   text: 'Primary'
 }
 
-export const Gray = Template.bind({})
-Gray.args = {
-  type: 'gray',
-  text: 'Gray'
+export const Neutral = Template.bind({})
+Neutral.args = {
+  type: 'neutral',
+  text: 'Neutral'
 }
 
 export const Warning = Template.bind({})

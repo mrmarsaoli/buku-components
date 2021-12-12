@@ -85,7 +85,7 @@ export const Button = ({
 const buttonTypeMap = {
   primary: 'bg-primary text-white',
   secondary: 'bg-secondary text-black',
-  gray: 'bg-gray text-black',
+  neutral: 'bg-neutral text-black',
   warning: 'bg-warning text-white',
   outline: 'bg-white border border-primary text-primary'
 }

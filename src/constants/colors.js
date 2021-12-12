@@ -2,7 +2,7 @@ module.exports = {
   PRIMARY: '#084fa8',
   SECONDARY: '#f7b500',
   WARNING: '#e50707',
-  GRAY: '#eeeeee',
+  NEUTRAL: '#eeeeee',
   BLUE_80: '#046bb9',
   BLUE_60: '#0091ff',
   BLUE_10: '#e5f4ff',
