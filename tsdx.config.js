@@ -9,27 +9,22 @@ module.exports = {
           path: './postcss.config.js'
         },
         extensions: ['.css'],
-        minimize: false,
+        minimize: true,
+        include: ['./src/styles/index.css'],
+        extract: resolve('dist/styles/all.css')
+      }),
+      postcss({
+        config: {
+          path: './postcss.config.js'
+        },
+        extensions: ['.css'],
+        minimize: true,
         include: [
-          './src/styles/modules/base.css',
           './src/styles/modules/components.css',
           './src/styles/modules/utilities.css'
         ],
-        extract: resolve('dist/styles/all.css')
+        extract: resolve('dist/styles/utilities-only.css')
       })
-      // postcss({
-      //   config: {
-      //     path: './postcss.config.js'
-      //   },
-      //   extensions: ['.css'],
-      //   minimize: false,
-      //   include: [
-      //     './src/styles/modules/base.css',
-      //     './src/styles/modules/components.css',
-      //     './src/styles/modules/utilities.css'
-      //   ],
-      //   extract: resolve('dist/styles/utilities-only.css')
-      // })
     )
     return config
   }
