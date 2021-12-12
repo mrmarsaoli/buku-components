@@ -10,6 +10,7 @@ const {
 
 module.exports = {
   content: ['./src/**/*.{js,ts,tsx}'],
+  prefix: '_bw-',
   theme: {
     extend: {
       colors: {

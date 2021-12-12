@@ -57,19 +57,19 @@ export const Pagination = ({
 
   return (
     <nav aria-label="Page navigation">
-      <ul className="inline-flex items-center -space-x-px">
+      <ul className="_bw-inline-flex _bw-items-center _bw--space-x-px">
         {arrow && (
           <li>
             <a
               role="button"
-              className="block bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3"
+              className="_bw-block _bw-bg-white _bw-border _bw-border-gray-300 _bw-text-gray-500 hover:_bw-bg-gray-100 hover:_bw-text-gray-700 _bw-ml-0 _bw-rounded-l-lg _bw-leading-tight _bw-py-2 _bw-px-3"
               onClick={() => {
                 if (current !== 1) onPageSelect(current - 1)
               }}
             >
-              <span className="sr-only">Previous</span>
+              <span className="_bw-sr-only">Previous</span>
               <svg
-                className="w-5 h-5"
+                className="_bw-w-5 _bw-h-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,10 +87,10 @@ export const Pagination = ({
           <li key={index}>
             <a
               role="button"
-              className={`no-underline block bg-white border border-gray-300 text-gray-500 leading-tight py-2 px-3 ${
+              className={`_bw-no-underline _bw-block _bw-bg-white _bw-border _bw-border-gray-300 _bw-text-gray-500 _bw-leading-tight _bw-py-2 _bw-px-3 ${
                 item === current
-                  ? 'text-primary hover:bg-green-10 hover:text-green-60'
-                  : 'hover:bg-gray-100 hover:text-gray-700'
+                  ? '_bw-text-primary hover:_bw-bg-green-10 hover:_bw-text-green-60'
+                  : 'hover:_bw-bg-gray-100 hover:_bw-text-gray-700'
               }`}
               style={
                 item === current
@@ -112,14 +112,14 @@ export const Pagination = ({
           <li>
             <a
               role="button"
-              className="block bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3"
+              className="_bw-block _bw-bg-white _bw-border _bw-border-gray-300 _bw-text-gray-500 hover:_bw-bg-gray-100 hover:_bw-text-gray-700 _bw-rounded-r-lg _bw-leading-tight _bw-py-2 _bw-px-3"
               onClick={() => {
                 if (current !== numberOfPages) onPageSelect(current + 1)
               }}
             >
-              <span className="sr-only">Next</span>
+              <span className="_bw-sr-only">Next</span>
               <svg
-                className="w-5 h-5"
+                className="_bw-w-5 _bw-h-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

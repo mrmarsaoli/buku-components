@@ -67,41 +67,41 @@ export const Button = ({
     <>
       <button
         type="button"
-        className={`inline-block relative text-center overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
+        className={`_bw-inline-block _bw-relative _bw-text-center _bw-overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
         style={{ width, color, backgroundColor }}
         onClick={() => clickHandle()}
         role="button"
       >
         {(loading || disabled) && (
-          <div className="absolute left-0 top-0 w-full h-full bg-white opacity-50"></div>
+          <div className="_bw-absolute _bw-left-0 _bw-top-0 _bw-w-full _bw-h-full _bw-bg-white _bw-opacity-50"></div>
         )}
-        <span className="inline-block font-semibold">{text}</span>
-        <div className="absolute left-0 top-0 w-full h-full bg-black opacity-0 hover:opacity-10 transition-opacity"></div>
+        <span className="_bw-inline-block _bw-font-semibold">{text}</span>
+        <div className="_bw-absolute _bw-left-0 _bw-top-0 _bw-w-full _bw-h-full _bw-bg-black _bw-opacity-0 hover:_bw-opacity-10 _bw-transition-opacity"></div>
       </button>
     </>
   )
 }
 
 const buttonTypeMap = {
-  primary: 'bg-primary text-white',
-  secondary: 'bg-secondary text-black',
-  gray: 'bg-gray text-black',
-  warning: 'bg-warning text-white',
-  outline: 'bg-white border border-primary text-primary'
+  primary: '_bw-bg-primary _bw-text-white',
+  secondary: '_bw-bg-secondary _bw-text-black',
+  gray: '_bw-bg-gray _bw-text-black',
+  warning: '_bw-bg-warning _bw-text-white',
+  outline: '_bw-bg-white _bw-border _bw-border-primary _bw-text-primary'
 }
 
 const buttonSizeMap = {
-  xs: 'px-1 py-2 text-sm',
-  sm: 'px-5 py-2.5 text-sm',
-  base: 'px-5 py-3 text-sm',
-  lg: 'px-8 py-2.5 text-base'
+  xs: '_bw-px-1 _bw-py-2 _bw-text-sm',
+  sm: '_bw-px-5 _bw-py-2.5 _bw-text-sm',
+  base: '_bw-px-5 _bw-py-3 _bw-text-sm',
+  lg: '_bw-px-8 _bw-py-2.5 _bw-text-base'
 }
 
 const buttonRadiusMap = {
-  xs: 'rounded-xs',
-  small: 'rounded-small',
-  base: 'rounded',
-  md: 'rounded-md',
-  lg: 'rounded-lg',
-  xl: 'rounded-xl'
+  xs: '_bw-rounded-xs',
+  small: '_bw-rounded-small',
+  base: '_bw-rounded',
+  md: '_bw-rounded-md',
+  lg: '_bw-rounded-lg',
+  xl: '_bw-rounded-xl'
 }
