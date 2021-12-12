@@ -38,6 +38,14 @@ interface ButtonProps {
    */
   loading?: boolean
   /**
+   * Icon for button
+   */
+  icon?: JSX.Element
+  /**
+   * Icon position
+   */
+  iconPosition?: 'left' | 'right'
+  /**
    * Optional click event
    */
   onClick?: () => void
@@ -53,6 +61,8 @@ export const Button = ({
   backgroundColor,
   disabled = false,
   loading = false,
+  icon,
+  iconPosition = 'left',
   onClick
 }: ButtonProps) => {
   const clickHandle = () => {
@@ -67,7 +77,7 @@ export const Button = ({
     <>
       <button
         type="button"
-        className={`inline-block relative text-center overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
+        className={`inline-flex items-center relative text-center overflow-hidden ${buttonRadiusMap[rounded]} ${buttonTypeMap[type]} ${buttonSizeMap[size]}`}
         style={{ width, color, backgroundColor }}
         onClick={() => clickHandle()}
         role="button"
@@ -75,7 +85,13 @@ export const Button = ({
         {(loading || disabled) && (
           <div className="absolute left-0 top-0 w-full h-full bg-white opacity-50"></div>
         )}
+        {!!icon && iconPosition === 'left' && (
+          <span className="mr-2.5">{icon}</span>
+        )}
         <span className="inline-block font-semibold">{text}</span>
+        {!!icon && iconPosition === 'right' && (
+          <span className="ml-2.5">{icon}</span>
+        )}
         <div className="absolute left-0 top-0 w-full h-full bg-black opacity-0 hover:opacity-10 transition-opacity"></div>
       </button>
     </>
