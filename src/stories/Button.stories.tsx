@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { BLUE_10, BLUE_80 } from '../constants/colors'
+import { GREEN_10, GREEN_80 } from '../constants/colors'
 import { Button } from '../components'
 
 export default {
@@ -58,6 +58,6 @@ Small.args = {
 export const CustomColor = Template.bind({})
 CustomColor.args = {
   text: 'Custom Color',
-  backgroundColor: BLUE_80,
-  color: BLUE_10
+  backgroundColor: GREEN_80,
+  color: GREEN_10
 }
