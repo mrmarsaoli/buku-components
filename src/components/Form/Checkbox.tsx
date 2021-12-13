@@ -45,7 +45,7 @@ export const Checkbox = ({
   id,
   onSelect
 }: CheckboxProps) => {
-  const handleClick = (value: boolean) => {
+  const handleChange = (value: boolean) => {
     if (!onSelect || !!disabled) {
       return
     }
@@ -66,7 +66,7 @@ export const Checkbox = ({
           width,
           height
         }}
-        onClick={() => handleClick(!value)}
+        onChange={() => handleChange(!value)}
       />
       {!!label &&
         (typeof label === 'string' ? (
