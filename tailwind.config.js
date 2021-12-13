@@ -5,7 +5,9 @@ const {
   BLUE_80,
   BLUE_60,
   BLUE_10,
-  NEUTRAL
+  NEUTRAL,
+  GREEN_80,
+  GREEN_10
 } = require('./src/constants/colors.js')
 
 module.exports = {
@@ -27,6 +29,10 @@ module.exports = {
           80: BLUE_80,
           60: BLUE_60,
           10: BLUE_10
+        },
+        green: {
+          80: GREEN_80,
+          10: GREEN_10
         }
       }
     }
