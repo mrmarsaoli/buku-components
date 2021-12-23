@@ -70,7 +70,7 @@ export const Button = ({
       return
     }
 
-    if (onClick) onClick
+    if (onClick) onClick()
   }
 
   return (
